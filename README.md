@@ -1,0 +1,126 @@
+# Module 3 – Activity 2 – Password Generator (Dart)
+
+Build an application that generates a random password whose length depends on a
+chosen strength. Good practice with functions and randomness.
+
+## What to do
+
+### 1. Fill in your details
+
+Open `student.json` and fill in every field (use the **class code** your
+instructor gave you):
+
+```json
+{
+  "classCode": "1234",
+  "fullName": "Juan Dela Cruz",
+  "studentNumber": "2026-12345",
+  "studentEmail": "juan.delacruz@hau.edu.ph",
+  "personalEmail": "juan@example.com",
+  "githubAccount": "juandelacruz"
+}
+```
+
+> **Keep `student.json` identical across all your activities.** The autograder
+> cross-checks these fields between your repos, and a mismatch (e.g. a different
+> `classCode` in one activity) is flagged. The `classCode` must also match the
+> one in your repo name.
+
+### 2. Write the generator
+
+Work in [`bin/passgen.dart`](bin/passgen.dart). A password may contain a mix of
+**lowercase letters, uppercase letters, numbers, and the symbols `! @ # % ^ & *`**,
+and must be **random** (asking again gives a new one). Write two functions:
+
+| Function | What it does |
+| --- | --- |
+| `shuffleGenerator(int length)` | returns a random sequence of `length` characters from the allowed set |
+| `passwordGenerator(String strength)` | calls `shuffleGenerator` with the length for that strength |
+
+`passwordGenerator` maps the strength to a length:
+
+| Strength | Length |
+| --- | --- |
+| `weak` | 8 |
+| `medium` | 15 |
+| `strong` | 25 |
+
+For **any other input**, inform the user of the valid options and **return an
+empty string** (`''`).
+
+Program flow in `main()`:
+
+```dart
+void main() {
+  // ask user for password strength: "weak", "medium", or "strong"
+  // then call:  passwordGenerator(strength)  and print the result
+}
+```
+
+> **Concepts to research** - see the **Module 3 – Functions & Randomness** cheat
+> sheet in your workspace repo (`content/cheat-sheets/dart-m3-functions-and-random.md`):
+> `dart:math` `Random`, building a random string from a character set, and
+> branching on the chosen strength. It shows the building blocks, not the answer.
+
+Run it yourself:
+
+```bash
+dart run bin/passgen.dart
+```
+
+## Set up your repo
+
+Before you write any code, create **your own copy** of this activity from the
+template. Do not work in the template itself.
+
+1. **Create from the template.** Open the template repo and click
+   **Use this template → Create a new repository**.
+2. **Set the owner to the course org.** Under *Owner*, choose the **`HAU-6ADET`
+   course org**, **not** your personal account.
+3. **Name it by the convention** `m<module>a<activity>-<classcode>-<yourname>`.
+   For this activity that's **`m3a2-<classcode>-yourname`** (e.g.
+   `m3a2-1234-juandelacruz`). The `<classcode>` must match the one you put in
+   `student.json`.
+4. **Make it Private.** Set *Visibility* to **Private** so classmates can't see
+   your work.
+
+Then clone **your** new repo and work there:
+
+```bash
+git clone https://github.com/HAU-6ADET/m3a2-<classcode>-yourname.git
+cd m3a2-<classcode>-yourname
+```
+
+## Running the tests
+
+```bash
+dart pub get
+dart test
+```
+
+This activity is graded by **5 tests** (1 point each). They check:
+
+- ✅ `student.json` is completely filled in (1 test)
+- ✅ `shuffleGenerator` returns a string of the requested length (1 test)
+- ✅ `passwordGenerator` uses 8 / 15 / 25 characters for weak / medium / strong (1 test)
+- ✅ an unknown strength returns an empty string (1 test)
+- ✅ passwords use only allowed characters and are random (1 test)
+
+Each part is graded independently, so you earn partial credit.
+
+## Confirm your submission
+
+Your repo **is** your submission, so there is nothing to upload anywhere. When the
+tests pass locally, **commit and push** so your work is recorded:
+
+```bash
+git add -A
+git commit -m "Activity 2 complete"
+git push
+```
+
+Pushing triggers the **Autograde** workflow. Confirm your submission landed:
+
+1. Open your repo on GitHub and click the **Actions** tab.
+2. Open the latest **Autograde** run and confirm the green ✅ check
+   and the "5 / 5 tests passed" summary.

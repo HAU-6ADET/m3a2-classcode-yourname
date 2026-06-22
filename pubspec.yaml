@@ -1,0 +1,10 @@
+name: m3a2_passgen
+description: Module 3 - Activity 2 - Password Generator (Dart).
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: ^3.0.0
+
+dev_dependencies:
+  test: ^1.24.0

@@ -1,5 +1,8 @@
 # Module 3 – Activity 2 – Password Generator (Dart)
 
+[![Made with Claude](https://img.shields.io/badge/Made_with-Claude-D97757?logo=anthropic&logoColor=white)](https://tjakoen.github.io/notes/ten-times-zero)
+![Dart](https://img.shields.io/badge/Dart-0175C2?logo=dart&logoColor=white)
+
 Build an application that generates a random password whose length depends on a
 chosen strength. Good practice with functions and randomness.
 
@@ -157,3 +160,6 @@ allowance. Three habits keep you from wasting it:
    gets its own Codespace, so old ones pile up and use your storage. After your
    final push: **github.com/codespaces → ••• → Delete.** You can always recreate
    it later from the green **Code** button.
+
+---
+📚 **These materials were authored by [tjakoen](https://github.com/tjakoen), built with Claude.** I use AI in the open, and I expect you to use it to learn the material, not to skip the learning. [How I actually work with AI →](https://tjakoen.github.io/notes/ten-times-zero)
